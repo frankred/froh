@@ -8,7 +8,7 @@ The main feature of this framework is that you can also listen on changes of tha
 
 #### Example
 
-```
+```js
 Froh.set('serverlist', ['http://google.com', 'http://web.com', 'http://rothf.de']);
 
 Froh.on('serverlist', function(){
@@ -24,7 +24,7 @@ Now every change on that object will be tracked and the cb function will be call
 ### 2) Create a component
 First of all you can write a Froh component that has to implement the function `html()`. 
 This function will be called by a `render()` method automatically to redraw your defined component if you want so.
-```
+```js
 class WebsiteList extends FrohComponent {
     html() {
         return `<ul><li>${(Froh.get('websites') || []).join(`</li><li>`)}</li></ul>`;
@@ -34,7 +34,7 @@ class WebsiteList extends FrohComponent {
 
 ### 3) Froh.ready()
 Wait for Froh to be ready, you know that from jQuery...
-```
+```js
  Froh.ready(function () {
     ...
  }
@@ -46,7 +46,7 @@ With `Froh.on(...)` you can add a listener function that will be called every ti
 Your ```FrohComponent``` also needs a place within the html document. If you pass a tag, or just the tagname of that html element Froh automatically shows the component within that html tag.
 
 
-```
+```js
 <!doctype html>
 <html lang="en">
 <head>
