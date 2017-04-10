@@ -40,7 +40,7 @@ Wait for Froh to be ready, you know that from jQuery...
  }
 ```
 
-### 3) Go for it
+### 4) Go for it
 Instantiate your component and attach your data to the Froh storage.  
 With `Froh.on(...)` you can add a listener function that will be called every time when the value of the key will be modified or overwritten.
 Your ```FrohComponent``` also needs a place within the html document. If you pass a tag, or just the tagname of that html element Froh automatically shows the component within that html tag.
