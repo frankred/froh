@@ -86,6 +86,9 @@ class FrohComponent {
         }
         this.selectorAttribute = selectorAttribute.replace(/</g, '').replace(/>/g, '').replace(/\//g, '');
         this.renderCounter = 0;
+        if(this.init){
+            this.init();
+        }
     }
 
     render() {
